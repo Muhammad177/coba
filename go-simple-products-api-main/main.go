@@ -1,9 +1,9 @@
 package main
 
 import (
+	"Capstone/database"
+	"Capstone/routes"
 	"fmt"
-	"go-simple-products-api/database"
-	"go-simple-products-api/routes"
 	"os"
 
 	"github.com/labstack/echo/v4"

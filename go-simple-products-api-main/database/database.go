@@ -1,8 +1,8 @@
 package database
 
 import (
+	"Capstone/models"
 	"fmt"
-	"go-simple-products-api/models"
 	"log"
 	"os"
 
@@ -29,7 +29,11 @@ func InitDB() {
 		log.Fatalln("error: ", err)
 	}
 
-	DB.AutoMigrate(&models.Product{})
+	DB.AutoMigrate(
+		&models.User{},
+		&models.Thread{},
+		&models.Follow{},
+		&models.Comment{})
 
 	log.Println("connected to the database")
 }
